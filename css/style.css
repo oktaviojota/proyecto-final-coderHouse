@@ -1,0 +1,239 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+#bodyInicio {
+    width: 99vw
+    height: 100vw;
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: 70px 1fr 1fr 1fr 1fr;
+    grid-template-areas:
+    "header"
+    "carousel"
+    "mainInicio"
+    "mainInicio"
+    "footer"
+    ;
+
+    font-family: 'Source Sans Pro', sans-serif;
+    background-color: #3F3B6C ; 
+    overflow-x: hidden;
+}
+
+#bodyProductos {
+    width: 99vw
+    height: 100vw;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 70px 1fr 1fr 1fr;
+    grid-template-areas:
+    "header header"
+    "navP mainProductos"
+    "navP mainProductos"
+    "footer footer"
+    ;
+
+    font-family: 'Source Sans Pro', sans-serif;
+    background-color: #3F3B6C ; 
+    overflow-x: hidden;
+}
+
+.receteoLista a:link,a:visited,a:active {
+    list-style-type: none ;
+    text-decoration: none;
+}
+
+header {
+    grid-area: header;
+    border-bottom: 5px solid #3F3B6C;
+    text-align: right;
+    top: 0;
+    background-color: #9F73AB;
+}
+header nav ul li {
+    display: inline-block;
+    background-color: #3F3B6C;
+    color: #A3C7D6;
+    margin: 10px;
+    padding: 3px;
+}
+
+.logo {
+    width: 120px;
+    height: 30px;
+    border: 5px solid #A3C7D6;
+    box-align: left;
+}
+
+.carruselimg {
+    width: 100vw;
+    height: 40vh;
+    margin-left:auto ;
+    margin-right: auto;
+    display: block;
+}
+
+#mainInicio {
+    grid-area: mainInicio;
+    grid-template-rows: 1fr 1fr;
+    grid-template-areas: 
+    "ofertas"
+    "novedades"
+    ;
+    grid-row-gap: 200px;
+    background-color: #3F3B6C ;
+    
+}
+
+#mainArmaTuPc {
+    width: 100vw;
+    height: 80vh;
+    background-color: #3F3B6C ;
+}
+
+#mainProductos {
+    grid-area: mainProductos;
+    width: 100vw;
+    height: 100vh;
+    margin-top: 5vh;
+    background-color: #3F3B6C ;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: center;
+}
+
+#navProductos {
+    grid-area: NavP;
+}
+
+#mainQuieneSomos {
+    width: 100vw;
+    height: 80vh;
+    margin-top: 15vh;
+    background-color: #3F3B6C ;
+}
+
+#mainPcArmadas {
+    width: 100vw;
+    height: 100vh;
+    margin-top: 5vh;
+    background-color: #3F3B6C ;
+}
+h1 {
+    background-color: #3F3B6C;
+    text-align: center;
+} 
+
+h2 {
+    text-align: center;
+}
+
+#carousel {
+    grid-area: carousel;
+
+}
+
+#ofertas {
+    grid-area: ofertas;
+    border: 5px solid black;
+}
+
+#novedades {
+    grid-area: novedades;
+    border: 5px solid black;
+}
+
+#contenedorOfertas {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-around;
+}
+
+#contenedorNovedades {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-around;
+}
+
+.producto {
+    width: 250px;
+    height: 300px;
+    background-color: #9F73AB;
+    border: 3px solid black;
+    margin: 10px;
+    text-align: center;
+    display: inline-block;
+}
+
+.imgProducto {
+    width: 230px ;
+    height: 150px;
+    
+}
+
+
+footer {
+    grid-area: footer;
+    background-color: #9F73AB;
+}
+
+.cajaArmaTuPc {
+    width: 40vw;
+    height: 40vh;
+    border: 5px solid black;
+    display: inline-block;
+}
+
+.cajaPcArmadas {
+    width: 25vw;
+    height: 40vh;
+    border: 5px solid black;
+    margin: 10px;
+    display: inline-block;
+    text-align: center;
+}
+
+.textoPcArmadas {
+    width: 50vw;
+    position: relative;
+    font-size: 2rem;
+    text-align: center;
+    color: #A3C7D6;
+    left: 25vw;
+}
+
+@media  (max-width: 480px) {
+    #contenedorOfertas {
+        display: flex;
+        flex-direction: column;
+        flex-wrap: wrap;
+        justify-content: center;
+        align-items: center;
+    }
+    
+    #contenedorNovedades {
+        display: flex;
+        flex-direction: column;
+        flex-wrap: wrap;
+        justify-content: center;
+        align-items: center;
+    }
+    .producto {
+        width: 100vw;
+        height: 300px;
+        background-color: #9F73AB;
+        border: 3px solid black;
+        margin: 10px;
+    }
+    .imgProducto {
+        width: 230px ;
+        height: 150px;
+        display: inline;
+    }
+}

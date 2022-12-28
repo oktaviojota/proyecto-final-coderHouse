@@ -1,0 +1,3 @@
+clase 2 min 54: empieza hablar de FORMULARIO
+clase 2 min 100(hora 1 min 40): habla de enlaces
+overflow-x saca el scroll si da errores
